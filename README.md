@@ -21,6 +21,12 @@ Para garantir que o código seja fácil de manter, escalável e seguro, apliquei
 * **Estratégia ELT:** Os dados são extraídos e salvos no formato bruto (`JSONB`) no banco de dados. Isso preserva o histórico fiel da API para que as limpezas e filtros (camadas Silver/Gold) sejam feitos posteriormente sem novas requisições web.
 * **Prevenção de Falhas (Operador Walrus):** Implementação de checagem em tempo de execução para garantir que o banco só tente salvar dados se a API responder com sucesso.
 
+## Saída no Banco de Dados (Camada Bronze)
+
+Abaixo está o visual de como os dados raws ficam armazenados na tabela `raw_acoes`:
+
+![Visualização da tabela raw_acoes no Supabase](https://github.com/Lucas-ui63/Pipeline_Captura_de_Dados_Financeiros/blob/main/assets/Raw_titles.png)
+
 ## Como Rodar o Projeto
 
 1. Clone o repositório:
